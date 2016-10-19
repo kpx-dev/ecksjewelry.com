@@ -46,6 +46,6 @@
     "commit": "44d7def72ba04c7efa5a8356917ee29f875b7908"
   },
   "_source": "https://github.com/Polymer/web-component-tester.git",
-  "_target": "^4.0.0",
+  "_target": "4.3.5",
   "_originalSource": "web-component-tester"
 }
