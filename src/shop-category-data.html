@@ -108,7 +108,28 @@
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
             // console.log(photos.photos.data);
-            this.set('category.items', photos.photos.data);
+            const categories = [];
+
+            photos.photos.data.forEach((e) => {
+              let thumb = e.images[0].source;
+              let full = e.images[0].source;
+              let currentWidth = e.images[0].width;
+
+              e.images.forEach((i) => {
+                if (i.width >= 200 && i.width <= 600) {
+                  thumb = i.source;
+                } else if (currentWidth <= i.width) {
+                  full = i.source;
+                }
+              });
+
+              categories.push({
+                thumb, full, name: e.name,
+              });
+            });
+
+            // console.log(categories);
+            this.set('category.items', categories);
           },
           onError: function(e) {
             this._setFailure(true);

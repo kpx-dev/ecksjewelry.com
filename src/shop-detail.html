@@ -137,7 +137,7 @@
         failure="{{failure}}"></shop-category-data>
 
     <div id="content" hidden$="[[failure]]">
-      <shop-image alt="[[item.name]]" src="[[item.images.0.source]]"></shop-image>
+      <shop-image alt="[[item.name]]" src="[[item.full]]"></shop-image>
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.name]]</h1>
         <div class="price">[[_formatPrice(item.price)]]</div>
@@ -201,10 +201,10 @@
             var text = item ? item.name : '';
             this.$.desc.innerHTML = this._unescapeText(text);
 
-            console.log(item.category);
+            // console.log(item);
             this.fire('change-section', {
               category: this.routeData.category, //item.category,
-              title: item.title
+              title: text,
             });
           });
         }
