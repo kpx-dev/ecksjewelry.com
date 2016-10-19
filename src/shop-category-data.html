@@ -1,0 +1,146 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="shop-category-data">
+
+  <script>
+  (function() {
+    var categoryList = [
+      {
+        name: 'pendants',
+        album_id: '1791333114480263',
+        title: 'Pendants',
+        image: '/images/pendants.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/4QORaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjEzMzJDN0U4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjEzMzJDN0Q4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUYxNkIyQTRCOTU1RTUxMTgyMDg4ODJFRUE3NDA2NUMiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAAnACMDASIAAhEBAxEB/8QASwABAQAAAAAAAAAAAAAAAAAAAAcBAQAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ+AAAAAAAAAAAAAAAAAD//Z'
+      },
+      {
+        name: 'rings',
+        album_id: '1791933407753567',
+        title: 'Rings',
+        image: '/images/rings.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/4QORaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjEzMzJDN0U4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjEzMzJDN0Q4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUYxNkIyQTRCOTU1RTUxMTgyMDg4ODJFRUE3NDA2NUMiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAAnACMDASIAAhEBAxEB/8QASwABAQAAAAAAAAAAAAAAAAAAAAcBAQAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ+AAAAAAAAAAAAAAAAAD//Z'
+      },
+      {
+        name: 'cufflinks',
+        album_id: '1791331714480403',
+        title: 'Cufflinks',
+        image: '/images/cufflinks.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/4QORaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjEzMzJDN0U4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjEzMzJDN0Q4RENCMTFFNkE0MUZEQTZGODczNjRDRUEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUYxNkIyQTRCOTU1RTUxMTgyMDg4ODJFRUE3NDA2NUMiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3MTMzNzcwYS0yNjhmLTExZGYtYWM1Yi1iOGNjNWJhZGY0NWYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAAnACMDASIAAhEBAxEB/8QASwABAQAAAAAAAAAAAAAAAAAAAAcBAQAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJ+AAAAAAAAAAAAAAAAAD//Z'
+      }
+    ];
+
+    Polymer({
+
+      is: 'shop-category-data',
+
+      properties: {
+
+        categoryName: String,
+
+        itemName: String,
+
+        // itemIndex: {
+        //   type: Number,
+        //   computed: '_computeItem(itemIndex)',
+        //   notify: true
+        // },
+
+        categories: {
+          type: Array,
+          value: categoryList,
+          readOnly: true,
+          notify: true
+        },
+
+        category: {
+          type: Object,
+          computed: '_computeCategory(categoryName)',
+          notify: true
+        },
+
+        item: {
+          type: Object,
+          computed: '_computeItem(category.items, itemName)',
+          notify: true
+        },
+
+        failure: {
+          type: Boolean,
+          notify: true,
+          readOnly: true
+        }
+      },
+
+      _getCategoryObject: function(categoryName) {
+        for (var i = 0, c; c = this.categories[i]; ++i) {
+          if (c.name === categoryName) {
+            return c;
+          }
+        }
+        this.fire('show-invalid-url-warning');
+      },
+
+      _computeCategory: function(categoryName) {
+        // Fetch the items of the category. Note that the fetch is asynchronous,
+        // which means `category.items` may not be set initially (but that path
+        // will be notified when the fetch completes).
+        var categoryObj = this._getCategoryObject(categoryName);
+        this._fetchItems(categoryObj, 1);
+        return categoryObj;
+      },
+
+      _computeItem: function(items, itemName) {
+        if (items[itemName] === undefined) {
+          this.fire('show-invalid-url-warning');
+          return;
+        }
+
+        return items[itemName];
+      },
+
+      _fetchItems: function(category, attempts) {
+        this._setFailure(false);
+        // Only fetch the items of a category if it has not been previously set.
+        if (!category || category.items) {
+          return;
+        }
+        this._getResource({
+          url : 'https://graph.facebook.com/v2.8/' + category.album_id + '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&fields=photo_count%2Cphotos%7Bwebp_images,name%7D',
+          onLoad: function(e) {
+            var photos = JSON.parse(e.target.responseText);
+            // console.log(photos.photos.data);
+            this.set('category.items', photos.photos.data);
+          },
+          onError: function(e) {
+            this._setFailure(true);
+          }
+        }, attempts);
+      },
+
+      _getResource: function(rq, attempts) {
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', rq.onLoad.bind(this));
+        xhr.addEventListener('error', function(e) {
+          // Flaky connections might fail fetching resources
+          if (attempts > 1) {
+            this.debounce('_getResource', this._getResource.bind(this, rq, attempts - 1), 200);
+          } else {
+            rq.onError.call(this, e);
+          }
+        }.bind(this));
+
+        xhr.open('GET', rq.url);
+        xhr.send();
+      },
+
+      refresh: function() {
+        if (this.categoryName) {
+          // this._fetchItems(this._getCategoryObject(this.categoryName), 3);
+        }
+      }
+
+    });
+
+  })();
+  </script>
+
+</dom-module>
