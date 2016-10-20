@@ -92,7 +92,7 @@
     <ul class="grid" hidden$="[[failure]]">
       <template is="dom-repeat" items="[[_getListItems(category.items)]]" initial-count="4">
         <li>
-          <a href$="[[_getItemHref(category.name, index)]]">
+          <a href$="[[_getItemHref(category.name, item, index)]]">
             <shop-list-item item="[[item]]"></shop-list-item>
           </a>
         </li>
@@ -144,9 +144,10 @@
         return items || [{},{},{},{},{},{},{},{},{},{}];
       },
 
-      _getItemHref: function(categoryName, index) {
+      _getItemHref: function(categoryName, item, index) {
         // console.log('current cat ', categoryName, this.category.name);
-        return ['./#/detail', categoryName, index].join('/');
+
+        return ['./#/detail', categoryName, index].join('/') + '/#' + item.name;
       },
 
       _getPluralizedQuantity: function(quantity) {

@@ -104,7 +104,7 @@
           return;
         }
         this._getResource({
-          url : 'https://graph.facebook.com/v2.8/' + category.album_id + '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&fields=photo_count%2Cphotos%7Bimages,name%7D',
+          url : 'https://graph.facebook.com/v2.8/' + category.album_id + '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&fields=photo_count%2Cphotos.limit(100)%7Bimages,name%7D',
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
             // console.log(photos.photos.data);
