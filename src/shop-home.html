@@ -95,9 +95,6 @@
           <shop-image src="[[item.image]]" alt="[[item.title]]" placeholder-img="[[item.placeholder]]"></shop-image>
         </a>
         <h2><a aria-label$="[[item.title]]" href$="/#/list/[[item.name]]">[[item.title]]</a></h2>
-        <shop-button>
-          <!-- <a aria-label$="[[item.title]] Shop Now" href$="/#/list/[[item.name]]">Shop Now</a> -->
-        </shop-button>
       </div>
     </template>
 
@@ -120,6 +117,15 @@
           observer: '_visibleChanged'
         }
 
+      },
+
+      _shouldHidden(item) {
+        console.log(item);
+        if (item == undefined) {
+          return true;
+        } else {
+          return false;
+        }
       },
 
       _visibleChanged: function(visible) {

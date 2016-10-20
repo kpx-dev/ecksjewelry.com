@@ -28,6 +28,7 @@
       },
       {
         name: 'buy',
+        hidden: true,
         // album_id: '1791331714480403',
         title: 'Where To Buy',
         // image: '/images/cufflinks.jpg',
@@ -102,7 +103,7 @@
         if (category.album_id === undefined) {
           return;
         }
-        
+
         this._setFailure(false);
         // Only fetch the items of a category if it has not been previously set.
         if (!category || category.items) {
