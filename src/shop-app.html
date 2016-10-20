@@ -9,6 +9,7 @@
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/platinum-https-redirect/platinum-https-redirect.html">
 <link rel="import" href="shop-category-data.html">
 <!-- Since 'home' is the default route, eagerly load it. -->
 <link rel="import" href="shop-home.html">
@@ -212,7 +213,7 @@
       }
 
     </style>
-
+    <platinum-https-redirect></platinum-https-redirect>
     <shop-analytics key="UA-68379-33"></shop-analytics>
     <app-location route="{{route}}" use-hash-as-path></app-location>
     <app-route
