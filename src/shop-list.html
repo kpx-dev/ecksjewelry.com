@@ -11,7 +11,6 @@
   <template>
 
     <style include="shop-common-styles">
-
       .hero-image {
         position: relative;
         height: 320px;
@@ -52,6 +51,10 @@
         text-decoration: none;
       }
 
+      .center {
+        text-align: center;
+      }
+
       @media (max-width: 767px) {
         .hero-image {
           display: none;
@@ -78,7 +81,7 @@
         category="{{category}}"
         failure="{{failure}}"></shop-category-data>
 
-    <shop-image
+    <shop-image hidden$={{hidden}}
         alt="[[category.title]]"
         src="[[category.image]]"
         placeholder-img="[[category.placeholder]]" class="hero-image">
@@ -87,6 +90,10 @@
     <header>
       <h1>[[category.title]]</h1>
       <span>[[_getPluralizedQuantity(category.items.length)]]</span>
+      <div class="center" hidden$={{!hidden}}>
+        <!-- <p><a href="https://heomanly.com">HEO Manly</a></p> -->
+        <p>Coming soon...</p>
+      </div>
     </header>
 
     <ul class="grid" hidden$="[[failure]]">
@@ -108,6 +115,9 @@
         offline="[[offline]]"
         on-try-reconnect="_tryReconnect"></shop-network-warning>
 
+
+
+
   </template>
 
   <script>
@@ -117,6 +127,10 @@
       is: 'shop-list',
 
       properties: {
+        hidden: {
+          type: Boolean,
+          value: false,
+        },
 
         category: Object,
 
@@ -164,6 +178,12 @@
             this.fire('show-invalid-url-warning');
           } else {
             this.debounce('change-section', function() {
+              if (category.name === 'buy') {
+                this.set('hidden', true);
+              } else {
+                this.set('hidden', false);
+              }
+
               // Notify the category and the page's title
               this.fire('change-section', {
                 category: category.name,
