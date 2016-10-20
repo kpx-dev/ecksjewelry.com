@@ -110,25 +110,42 @@
           return;
         }
         this._getResource({
-          url : 'https://graph.facebook.com/v2.8/' + category.album_id + '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&fields=photo_count%2Cphotos.limit(100)%7Bimages,name%7D',
+          url : 'https://graph.facebook.com/v2.8/' +
+          category.album_id +
+          '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&' +
+          'fields=photos.limit(100){images,name,comments{attachment,message,from}}',
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
-            // console.log(photos.photos.data);
             const categories = [];
+            const pageAuthor = '1573553162924927';
 
             photos.photos.data.forEach((e) => {
               let thumb = e.images[0].source;
-              let full = e.images[0].source;
+              let full = [e.images[0].source];
               let currentWidth = e.images[0].width;
 
               e.images.forEach((i) => {
-                if (i.width >= 200 && i.width <= 600) {
+                if (i.width >= 300 && i.width <= 800) {
                   thumb = i.source;
                 } else if (currentWidth <= i.width) {
-                  full = i.source;
+                  full[0] = i.source;
                 }
+                // console.log(i);
               });
 
+              // console.log(e.comments);
+
+              if (e.comments !== undefined) {
+                e.comments.data.forEach((c) => {
+                  if (c.from.id === pageAuthor) {
+                    // console.log(c.message);
+                    // console.log(c.attachment.media.image.src);
+                    // console.log(full);
+                    full.push(c.attachment.media.image.src);
+                  }
+                });
+              }
+              // console.log(more);
               categories.push({
                 thumb, full, name: e.name,
               });

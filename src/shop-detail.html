@@ -1,6 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<link rel="import" href="../bower_components/polymer-image-slider/polymer-image-slider.html">
+
 <link rel="import" href="shop-button.html">
 <link rel="import" href="shop-category-data.html">
 <link rel="import" href="shop-common-styles.html">
@@ -137,7 +140,13 @@
         failure="{{failure}}"></shop-category-data>
 
     <div id="content" hidden$="[[failure]]">
-      <shop-image alt="[[item.name]]" src="[[item.full]]"></shop-image>
+      <!-- <shop-image alt="[[item.name]]" src="[[item.full]]"></shop-image> -->
+      <image-slider images="[[item.full]]"></image-slider>
+
+      <!-- <template is="dom-repeat" items="[[item.more]]" initial-count="0">
+        <shop-image src="[[item]]"></shop-image>
+      </template> -->
+
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.name]]</h1>
         <div class="price">[[_formatPrice(item.price)]]</div>
