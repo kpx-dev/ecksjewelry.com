@@ -107,9 +107,6 @@
       </template>
     </ul>
 
-    failure: [[failure]]<br />
-    offline: [[offline]]
-
     <shop-network-warning
         hidden$="[[!failure]]"
         offline="[[offline]]"
@@ -176,8 +173,8 @@
 
       _getItemHref: function(categoryName, item, index) {
         // console.log('current cat ', categoryName, this.category.name);
-
-        return ['./#/detail', categoryName, index].join('/') + '/#' + item.name;
+        const itemName = item.name ? '/#' + item.name : '';
+        return ['./#/detail', categoryName, index].join('/') + itemName;
       },
 
       _getPluralizedQuantity: function(quantity) {

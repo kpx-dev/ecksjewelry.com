@@ -21,15 +21,16 @@
       }
 
       #content {
-        @apply(--layout-horizontal);
+        /*@apply(--layout-horizontal);*/
         @apply(--layout-center-justified);
       }
 
       shop-image {
-        position: relative;
-        margin: 64px 32px;
-        width: 50%;
-        max-width: 600px;
+        display: block;
+        /*position: relative;*/
+        /*margin: 64px 32px;*/
+        width: 100%;
+        /*max-width: 1024px;*/
         --shop-image-img: {
           @apply(--layout-fit);
         };
@@ -68,6 +69,7 @@
 
       .description {
         margin: 32px 0;
+        /*vertical-align: text-top;*/
       }
 
       .description > h2 {
@@ -139,20 +141,17 @@
         item="{{item}}"
         failure="{{failure}}"></shop-category-data>
 
+      <shop-image alt="[[item.name]]" src="[[item.full.0]]"></shop-image>
     <div id="content" hidden$="[[failure]]">
-      <!-- <shop-image alt="[[item.name]]" src="[[item.full]]"></shop-image> -->
-      <image-slider images="[[item.full]]"></image-slider>
 
-      <!-- <template is="dom-repeat" items="[[item.more]]" initial-count="0">
-        <shop-image src="[[item]]"></shop-image>
-      </template> -->
+      <!-- <image-slider images="[[item.full]]"></image-slider> -->
 
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.name]]</h1>
         <div class="price">[[_formatPrice(item.price)]]</div>
 
         <div class="description">
-          <h2>Description</h2>
+          <!-- <h2>Description</h2> -->
           <p id="desc"></p>
         </div>
         <!-- <shop-button responsive>

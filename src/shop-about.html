@@ -1,0 +1,95 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="shop-category-data.html">
+<link rel="import" href="shop-common-styles.html">
+<link rel="import" href="shop-image.html">
+<link rel="import" href="shop-list-item.html">
+
+<dom-module id="shop-about">
+
+  <template>
+
+    <style include="shop-common-styles">
+      .hero-image {
+        position: relative;
+        height: 320px;
+        overflow: hidden;
+        margin-bottom: 32px;
+      }
+
+      .hero-image {
+        --shop-image-img: {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -9999px;
+          right: -9999px;
+          max-width: none;
+        };
+      }
+
+      .grid {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-justified);
+        margin: 0 10px 32px 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .grid li {
+        -webkit-flex: 1 1;
+        flex: 1 1;
+        -webkit-flex-basis: 33%;
+        flex-basis: 33%;
+        max-width: 33%;
+      }
+
+      .grid a {
+        display:block;
+        text-decoration: none;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .hero-image {
+          display: none;
+        }
+
+        .grid  li {
+          -webkit-flex-basis: 50%;
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+      }
+
+    </style>
+<!--
+    <app-route
+        route="[[route]]"
+        pattern="/:category"
+        data="{{routeData}}"
+        >
+    </app-route> -->
+
+    <header>
+      <h3>About ECKS Jewelry</h3>
+    </header>
+    <p class="center">
+    <img width="1024"
+        alt="About ECKS Jewelry"
+        src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg" />
+    </p>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'shop-about'
+    });
+  </script>
+
+</dom-module>

@@ -262,19 +262,18 @@
       <!-- Lazy-create the tabs for larger screen sizes. -->
       <div id="tabContainer" sticky$="[[_shouldShowTabs]]" hidden$="[[!_shouldShowTabs]]">
         <template is="dom-if" if="[[_shouldRenderTabs]]">
-          <shop-tabs
-              selected="[[categoryName]]"
-              attr-for-selected="name">
+          <shop-tabs selected="[[categoryName]]" attr-for-selected="name">
 
-              <shop-tab name="Home">
-                <a href="/#/">Home</a>
-              </shop-tab>
+              <shop-tab name="Home"><a href="/#/">Home</a></shop-tab>
+              <shop-tab name="About"><a href="/#/about">About</a></shop-tab>
+              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>
 
             <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
               <shop-tab name="[[category.name]]" hidden$="[[category.hidden_from_nav]]">
                 <a href="/#/list/[[category.name]]">[[category.title]]</a>
               </shop-tab>
             </template>
+            <!-- <hr /> -->
           </shop-tabs>
         </template>
       </div>
@@ -286,10 +285,15 @@
       <app-drawer opened="{{drawerOpened}}" swipe-open tabindex="0">
         <iron-selector role="navigation" class="drawer-list" selected="[[categoryName]]" attr-for-selected="name">
           <a name="ECKS JEWELRY" href="/#/">ECKS JEWELRY</a>
+          <hr />
 
           <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
             <a name="[[category.name]]" href="/#/list/[[category.name]]" hidden$="[[category.hidden_from_nav]]">[[category.title]]</a>
           </template>
+          <hr />
+          <a href="/#/about">About</a>
+          <a href="/#/contact">Contact</a>
+          <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
         </iron-selector>
       </app-drawer>
     </template>
@@ -298,6 +302,9 @@
       <shop-home name="home" categories="[[categories]]" route="[[subroute]]" offline="[[offline]]"></shop-home>
       <shop-list name="list" route="[[subroute]]" offline="[[offline]]"></shop-list>
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
+      <shop-about name="about"></shop-about>
+      <shop-contact name="contact"></shop-contact>
+
       <!-- cart view -->
       <!-- <shop-cart name="cart" cart="[[cart]]" total="[[total]]"></shop-cart> -->
       <!-- checkout view -->
@@ -307,6 +314,9 @@
     </iron-pages>
 
     <footer>
+      <a href="/#/">Home</a> |
+      <a href="/#/about">About</a> |
+      <a href="/#/contact">Contact</a> |
       <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
       Created by <a href="https://knncreative.com">KNN Creative</a>
       <!-- <div class="demo-label">Demo Only</div> -->
@@ -535,7 +545,7 @@
       },
 
       _computeShouldShowTabs: function(page, smallScreen) {
-        return (page === 'home' || page === 'list' || page === 'detail') && !smallScreen;
+        return (page === 'home' || page === 'list' || page === 'detail' || page === 'about' || page === 'contact') && !smallScreen;
       },
 
       _computeShouldRenderTabs: function(_shouldShowTabs, loadComplete) {
