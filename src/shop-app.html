@@ -225,9 +225,6 @@
 
     <iron-media-query query="max-width: 767px" query-matches="{{smallScreen}}"></iron-media-query>
 
-    <!--
-      shop-category-data provides the list of categories.
-    -->
     <shop-category-data categories="{{categories}}"></shop-category-data>
 
     <!--
@@ -274,7 +271,7 @@
               </shop-tab>
 
             <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
-              <shop-tab name="[[category.name]]">
+              <shop-tab name="[[category.name]]" hidden$="[[category.hidden_from_nav]]">
                 <a href="/#/list/[[category.name]]">[[category.title]]</a>
               </shop-tab>
             </template>
@@ -291,18 +288,15 @@
           <a name="ECKS JEWELRY" href="/#/">ECKS JEWELRY</a>
 
           <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
-            <a name="[[category.name]]" href="/#/list/[[category.name]]">[[category.title]]</a>
+            <a name="[[category.name]]" href="/#/list/[[category.name]]" hidden$="[[category.hidden_from_nav]]">[[category.title]]</a>
           </template>
         </iron-selector>
       </app-drawer>
     </template>
 
     <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
-      <!-- home view -->
       <shop-home name="home" categories="[[categories]]" route="[[subroute]]" offline="[[offline]]"></shop-home>
-      <!-- list view of items in a category -->
       <shop-list name="list" route="[[subroute]]" offline="[[offline]]"></shop-list>
-      <!-- detail view of one item -->
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
       <!-- cart view -->
       <!-- <shop-cart name="cart" cart="[[cart]]" total="[[total]]"></shop-cart> -->
@@ -371,8 +365,6 @@
         'dom-change': '_domChange',
         'show-invalid-url-warning': '_onFallbackSelectionTriggered'
       },
-
-
 
       created: function() {
         window.performance && performance.mark && performance.mark('shop-app.created');

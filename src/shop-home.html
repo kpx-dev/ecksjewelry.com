@@ -138,23 +138,15 @@
       </div>
     </template> -->
 
-    <shop-category-data
-        id="categoryData"
-        category-name="home"
-        category="{{category}}"
-        failure="{{failure}}">
-    </shop-category-data>
-
-    <ul class="grid" hidden$="[[failure]]">
-      <template is="dom-repeat" items="[[category.items]]" initial-count="4">
-        <li>
-          <a href$="[[_getItemHref(item.name)]]">
-            <shop-list-item item="[[item]]"></shop-list-item>
-          </a>
-        </li>
-      </template>
-    </ul>
-
+    <shop-list
+      category-name="home"
+      show-album-title=false
+      show-album-item-count=false
+      show-banner=false
+      name="list"
+      route="[[subroute]]"
+      offline="[[offline]]">
+    </shop-list>
 
   </template>
 

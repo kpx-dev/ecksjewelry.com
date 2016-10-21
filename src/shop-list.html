@@ -73,23 +73,24 @@
         route="[[route]]"
         pattern="/:category"
         data="{{routeData}}"
-        ></app-route>
+        >
+    </app-route>
 
     <shop-category-data
         id="categoryData"
-        category-name="[[routeData.category]]"
+        category-name="[[_computeCategoryName(routeData.category)]]"
         category="{{category}}"
         failure="{{failure}}"></shop-category-data>
 
-    <shop-image hidden$={{hidden}}
+    <shop-image hidden$={{showBanner}}
         alt="[[category.title]]"
         src="[[category.image]]"
         placeholder-img="[[category.placeholder]]" class="hero-image">
     </shop-image>
 
     <header>
-      <h1>[[category.title]]</h1>
-      <span>[[_getPluralizedQuantity(category.items.length)]]</span>
+      <h1 hidden$="[[showAlbumTitle]]">[[category.title]]</h1>
+      <span hidden$="[[showAlbumItemCount]]">[[_getPluralizedQuantity(category.items.length)]]</span>
       <div class="center" hidden$={{!hidden}}>
         <!-- <p><a href="https://heomanly.com">HEO Manly</a></p> -->
         <p>Coming soon...</p>
@@ -106,10 +107,9 @@
       </template>
     </ul>
 
-    <!--
-      shop-network-warning shows a warning message when the items can't be rendered due
-      to network conditions.
-    -->
+    failure: [[failure]]<br />
+    offline: [[offline]]
+
     <shop-network-warning
         hidden$="[[!failure]]"
         offline="[[offline]]"
@@ -128,6 +128,17 @@
           type: Boolean,
           value: false,
         },
+
+        showAlbumTitle: Boolean,
+        showAlbumItemCount: Boolean,
+        showBanner: Boolean,
+
+        showAlbumItems: {
+          type: Boolean,
+          value: true,
+        },
+
+        categoryName: String,
 
         category: Object,
 
@@ -149,6 +160,14 @@
       observers: [
         '_categoryChanged(category, visible)'
       ],
+
+      _computeCategoryName(categoryName) {
+        if (categoryName) {
+          return categoryName
+        } else {
+          return this.categoryName;
+        }
+      },
 
       _getListItems: function(items) {
         // Return placeholder items when the items haven't loaded yet.
