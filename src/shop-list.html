@@ -115,9 +115,6 @@
         offline="[[offline]]"
         on-try-reconnect="_tryReconnect"></shop-network-warning>
 
-
-
-
   </template>
 
   <script>
@@ -142,7 +139,7 @@
 
         offline: {
           type: Boolean,
-          observer: '_offlineChanged'
+          observer: '_offlineChanged',
         },
 
         failure: Boolean
@@ -184,11 +181,11 @@
                 this.set('hidden', false);
               }
 
-              // Notify the category and the page's title
               this.fire('change-section', {
                 category: category.name,
                 title: category.title
               });
+
             });
           }
         }

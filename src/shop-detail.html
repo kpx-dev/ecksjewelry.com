@@ -207,7 +207,7 @@
           this.debounce('item-change', function() {
             // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
             // unescape it ("<br>") and set it as innerHTML.
-            var text = item ? item.name : '';
+            var text = item && item.name ? item.name : '';
             this.$.desc.innerHTML = this._unescapeText(text);
 
             // console.log(item);

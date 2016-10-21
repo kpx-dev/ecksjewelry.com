@@ -1,12 +1,14 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shop-button.html">
 <link rel="import" href="shop-image.html">
+<link rel="import" href="shop-list.html">
+<link rel="import" href="shop-category-data.html">
 
 <dom-module id="shop-home">
 
   <template>
 
-    <style include="shop-button">
+    <style include="shop-common-styles">
 
       .image-link {
         outline: none;
@@ -87,16 +89,72 @@
         }
       }
 
+      .grid {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-justified);
+        margin: 0 10px 32px 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .grid li {
+        -webkit-flex: 1 1;
+        flex: 1 1;
+        -webkit-flex-basis: 33%;
+        flex-basis: 33%;
+        max-width: 33%;
+      }
+
+      .grid a {
+        display:block;
+        text-decoration: none;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .hero-image {
+          display: none;
+        }
+
+        .grid  li {
+          -webkit-flex-basis: 50%;
+          flex-basis: 50%;
+          max-width: 50%;
+        }
+      }
+
     </style>
 
-    <template is="dom-repeat" items="[[categories]]" strip-whitespace>
+    <!-- <template is="dom-repeat" items="[[categories]]" strip-whitespace>
       <div class="item">
         <a class="image-link" href$="/#/list/[[item.name]]">
           <shop-image src="[[item.image]]" alt="[[item.title]]" placeholder-img="[[item.placeholder]]"></shop-image>
         </a>
         <h2><a aria-label$="[[item.title]]" href$="/#/list/[[item.name]]">[[item.title]]</a></h2>
       </div>
-    </template>
+    </template> -->
+
+    <shop-category-data
+        id="categoryData"
+        category-name="home"
+        category="{{category}}"
+        failure="{{failure}}">
+    </shop-category-data>
+
+    <ul class="grid" hidden$="[[failure]]">
+      <template is="dom-repeat" items="[[category.items]]" initial-count="4">
+        <li>
+          <a href$="[[_getItemHref(item.name)]]">
+            <shop-list-item item="[[item]]"></shop-list-item>
+          </a>
+        </li>
+      </template>
+    </ul>
+
 
   </template>
 
@@ -119,18 +177,17 @@
 
       },
 
-      _shouldHidden(item) {
-        console.log(item);
-        if (item == undefined) {
-          return true;
-        } else {
-          return false;
-        }
+      _getItemHref: function(categoryName) {
+        const catName = categoryName || 'pendants';
+        return ['./#/list', catName].join('/');
       },
 
       _visibleChanged: function(visible) {
         if (visible) {
-          this.fire('change-section', { title: 'Home' });
+          this.fire('change-section', {
+            category: 'cover',
+            title: 'Home'
+          });
         }
       }
 
