@@ -11,6 +11,17 @@
   <template>
 
     <style include="shop-common-styles">
+    img {
+      display: block;
+      /*position: relative;*/
+      /*margin: 64px 32px;*/
+      width: 100%;
+      /*max-width: 1024px;*/
+      --shop-image-img: {
+        @apply(--layout-fit);
+      };
+    }
+
       .hero-image {
         position: relative;
         height: 320px;
@@ -80,9 +91,13 @@
       <h3>About ECKS Jewelry</h3>
     </header>
     <p class="center">
+
+    <!-- <shop-image alt="[[item.name]]" src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg"></shop-image> -->
+
     <img width="1024"
         alt="About ECKS Jewelry"
         src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg" />
+
     </p>
   </template>
 
