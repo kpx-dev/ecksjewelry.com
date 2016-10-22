@@ -38,7 +38,6 @@
     "commit": "67c3a5d8e2b57f4581e1841ac126c0c8b398ebe1"
   },
   "_source": "https://github.com/philipjkim/polymer-image-slider.git",
-  "_target": "^2.4.1",
-  "_originalSource": "polymer-image-slider",
-  "_direct": true
+  "_target": "2.4.1",
+  "_originalSource": "polymer-image-slider"
 }

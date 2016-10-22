@@ -101,7 +101,7 @@
 
       _fetchItems: function(category, attempts) {
         // console.log('fetching item....', category);
-
+        // this.set('category.items', categories);
         if (category.album_id === undefined) {
           return;
         }
@@ -121,6 +121,7 @@
             const categories = [];
             const pageAuthor = '1573553162924927';
 
+            // console.log(photos.photos.data)
             photos.photos.data.forEach((e) => {
               let thumb = e.images[0].source;
               let full = [e.images[0].source];
@@ -147,17 +148,35 @@
                   }
                 });
               }
-              // console.log(more);
-              categories.push({
-                thumb, full, name: e.name,
-              });
+
+              if (e.name) {
+                let price = '';
+                const nameSplitted = e.name.split('\n');
+                const title = nameSplitted.shift(0).trim();
+                let description = [];
+
+                nameSplitted.forEach((i) => {
+                  if (i.startsWith('$')) {
+                    price = i.trim();
+                  } else {
+                    description.push(i);
+                  }
+                });
+
+                categories.push({
+                  title, price, thumb, full, description: description.join('\n')
+                });
+              } else {
+                categories.push({thumb, full});
+              }
+
             });
 
             // console.log(categories);
             this.set('category.items', categories);
           },
           onError: function(e) {
-            console.log('something wrong...?');
+            // console.log('something wrong...?');
             this._setFailure(true);
           }
         }, attempts);

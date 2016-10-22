@@ -11,6 +11,10 @@
   <template>
 
     <style include="shop-common-styles">
+      .item-link {
+        color: var(--app-secondary-color);
+      }
+
       .hero-image {
         position: relative;
         height: 320px;
@@ -100,7 +104,7 @@
     <ul class="grid" hidden$="[[failure]]">
       <template is="dom-repeat" items="[[_getListItems(category.items)]]" initial-count="4">
         <li>
-          <a href$="[[_getItemHref(category.name, item, index)]]">
+          <a href$="[[_getItemHref(category.name, item, index)]]" class="item-link">
             <shop-list-item item="[[item]]"></shop-list-item>
           </a>
         </li>
@@ -171,9 +175,11 @@
         return items || [{},{},{},{},{},{},{},{},{},{}];
       },
 
+      _slug: (s) => s.trim().replace(/ /g, '_'),
+
       _getItemHref: function(categoryName, item, index) {
         // console.log('current cat ', categoryName, this.category.name);
-        const itemName = item.name ? '/#' + item.name : '';
+        const itemName = item.title ? '/#' + this._slug(item.title) : '';
         return ['./#/detail', categoryName, index].join('/') + itemName;
       },
 
