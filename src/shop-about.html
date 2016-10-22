@@ -62,6 +62,9 @@
         text-decoration: none;
       }
 
+      article {
+        text-align: center;
+      }
       .center {
         text-align: center;
       }
@@ -87,23 +90,44 @@
         >
     </app-route> -->
 
+    <shop-category-data
+        id="categoryData"
+        category-name="about"
+        category="about"
+        ></shop-category-data>
+
     <header>
-      <h3>About ECKS Jewelry</h3>
+      <h3>[[pageData.title]]</h3>
+      <!-- <img width="100" src="[[pageData.media]]" -->
     </header>
+    <article>
+      <pre>
+        [[pageData.description]]
+      </pre>
+  </article>
     <p class="center">
-
     <!-- <shop-image alt="[[item.name]]" src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg"></shop-image> -->
-
-    <img width="1024"
+    <!-- <img width="1024"
         alt="About ECKS Jewelry"
-        src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg" />
+        src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg" /> -->
 
     </p>
   </template>
 
   <script>
     Polymer({
-      is: 'shop-about'
+      is: 'shop-about',
+
+      listeners: {
+        'page-data-loaded': '_onPageData',
+      },
+
+      _onPageData: function(e) {
+          console.log(e.detail);
+          this.set('pageData', e.detail);
+      },
+
+
     });
   </script>
 

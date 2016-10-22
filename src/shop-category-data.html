@@ -4,6 +4,7 @@
 
   <script>
   (function() {
+
     var categoryList = [
       {
         name: 'home',
@@ -68,10 +69,43 @@
           type: Boolean,
           notify: true,
           readOnly: true
+        },
+
+        fbAccessToken: {
+          type: String,
+          value: '1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs',
+        },
+
+        fbPageId: {
+          type: String,
+          value: '1573553162924927',
+        },
+
+        fbBaseUrl: {
+          type: String,
+          value: 'https://graph.facebook.com/v2.8/',
+        },
+
+        pageId: {
+          type: Object,
+          value: {
+            'about': '1793752087571699',
+          }
+        },
+
+        pageData: {
+          type: Object,
+          value: {},
+          notify: true,
         }
       },
 
+      // ready: function(){
+      //     this._fetchPage('about');
+      // },
+
       _getCategoryObject: function(categoryName) {
+        // console.log('_getCategoryObject');
         for (var i = 0, c; c = this.categories[i]; ++i) {
           if (c.name === categoryName) {
             return c;
@@ -81,10 +115,10 @@
       },
 
       _computeCategory: function(categoryName) {
-        // console.log('_computeCategory ', categoryName);
-        // Fetch the items of the category. Note that the fetch is asynchronous,
-        // which means `category.items` may not be set initially (but that path
-        // will be notified when the fetch completes).
+        if (categoryName === 'about' || categoryName === 'contact') {
+          return this._fetchPage(categoryName);
+        }
+
         var categoryObj = this._getCategoryObject(categoryName);
         this._fetchItems(categoryObj, 1);
         return categoryObj;
@@ -99,10 +133,27 @@
         return items[itemName];
       },
 
+      _fetchPage: function(pageName) {
+        const pageId = this.pageId[pageName];
+        const resourceId = `${this.fbPageId}_${pageId}`;
+
+        this._getResource({
+          url : `${this.fbBaseUrl}/${resourceId}/?access_token=${this.fbAccessToken}&fields=attachments{description,media,title}`,
+          onLoad: function(e) {
+            const res = JSON.parse(e.target.responseText);
+            const pageData = {
+              page: pageName,
+              title: res.attachments.data[0].title,
+              description: res.attachments.data[0].description,
+              media: res.attachments.data[0].media.image.src,
+            };
+            this.fire('page-data-loaded', pageData);
+          }
+        });
+      },
+
       _fetchItems: function(category, attempts) {
-        // console.log('fetching item....', category);
-        // this.set('category.items', categories);
-        if (category.album_id === undefined) {
+        if (category && category.album_id === undefined) {
           return;
         }
 
@@ -112,14 +163,11 @@
           return;
         }
         this._getResource({
-          url : 'https://graph.facebook.com/v2.8/' +
-          category.album_id +
-          '/?access_token=1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs&' +
-          'fields=photos.limit(100){images,name,comments{attachment,message,from}}',
+          url : `${this.fbBaseUrl}/${category.album_id}/?access_token=${this.fbAccessToken}&fields=photos.limit(100){images,name,comments{attachment,message,from}}`,
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
             const categories = [];
-            const pageAuthor = '1573553162924927';
+            const pageAuthor = this.pageId;
 
             // console.log(photos.photos.data)
             photos.photos.data.forEach((e) => {

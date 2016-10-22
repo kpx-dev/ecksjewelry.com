@@ -226,6 +226,7 @@
 
     <iron-media-query query="max-width: 767px" query-matches="{{smallScreen}}"></iron-media-query>
 
+    <!-- shop-app categoreies {{categories}} -->
     <shop-category-data categories="{{categories}}"></shop-category-data>
 
     <!--
@@ -299,11 +300,14 @@
       </app-drawer>
     </template>
 
+    <!-- pageData [[category.pageData]] -->
     <iron-pages role="main" selected="[[page]]" attr-for-selected="name" selected-attribute="visible" fallback-selection="404">
       <shop-home name="home" categories="[[categories]]" route="[[subroute]]" offline="[[offline]]"></shop-home>
       <shop-list name="list" route="[[subroute]]" offline="[[offline]]"></shop-list>
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
-      <shop-about name="about"></shop-about>
+
+
+      <shop-about name="about" page-data="[[category.pageData]]"></shop-about>
       <shop-contact name="contact"></shop-contact>
 
       <!-- cart view -->
@@ -471,6 +475,7 @@
       // Elements in the app can notify section changes.
       // Response by a11y announcing the section and syncronizing the category.
       _onChangeSection: function(event) {
+        // console.log('section changed...');
         var detail = event.detail;
 
         // Scroll to the top of the page when navigating to a non-list page. For list view,
