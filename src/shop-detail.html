@@ -150,11 +150,9 @@
         failure="{{failure}}"></shop-category-data>
 
 
-
-
+      <!-- <image-slider images="[[item.full]]"></image-slider> -->
     <div id="content" hidden$="[[failure]]">
       <shop-image src="[[item.full.0]]"></shop-image>
-      <!-- <image-slider images="[[item.full]]"></image-slider> -->
 
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.title]]</h1>
