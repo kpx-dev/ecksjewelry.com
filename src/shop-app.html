@@ -268,8 +268,7 @@
 
               <shop-tab name="Home"><a href="/#/">Home</a></shop-tab>
               <shop-tab name="About"><a href="/#/about">About</a></shop-tab>
-              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>
-
+              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>|
             <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
               <shop-tab name="[[category.name]]" hidden$="[[category.hidden_from_nav]]">
                 <a href="/#/list/[[category.name]]">[[category.title]]</a>
@@ -306,8 +305,7 @@
       <shop-list name="list" route="[[subroute]]" offline="[[offline]]"></shop-list>
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
 
-
-      <shop-about name="about" page-data="[[category.pageData]]"></shop-about>
+      <shop-about name="about"></shop-about>
       <shop-contact name="contact"></shop-contact>
 
       <!-- cart view -->

@@ -1,94 +1,17 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/app-route/app-route.html">
-<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="shop-category-data.html">
 <link rel="import" href="shop-common-styles.html">
-<link rel="import" href="shop-image.html">
-<link rel="import" href="shop-list-item.html">
 
 <dom-module id="shop-about">
 
   <template>
 
     <style include="shop-common-styles">
-    img {
-      display: block;
-      /*position: relative;*/
-      /*margin: 64px 32px;*/
-      width: 100%;
-      /*max-width: 1024px;*/
-      --shop-image-img: {
-        @apply(--layout-fit);
-      };
-    }
-
-      .hero-image {
-        position: relative;
-        height: 320px;
-        overflow: hidden;
-        margin-bottom: 32px;
-      }
-
-      .hero-image {
-        --shop-image-img: {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: -9999px;
-          right: -9999px;
-          max-width: none;
-        };
-      }
-
-      .grid {
-        @apply(--layout-horizontal);
-        @apply(--layout-wrap);
-        @apply(--layout-justified);
-        margin: 0 10px 32px 10px;
-        padding: 0;
-        list-style: none;
-      }
-
-      .grid li {
-        -webkit-flex: 1 1;
-        flex: 1 1;
-        -webkit-flex-basis: 33%;
-        flex-basis: 33%;
-        max-width: 33%;
-      }
-
-      .grid a {
-        display:block;
-        text-decoration: none;
-      }
-
       article {
-        text-align: center;
+        text-align: justify;
+        padding: 0 10px 0 0;
       }
-      .center {
-        text-align: center;
-      }
-
-      @media (max-width: 767px) {
-        .hero-image {
-          display: none;
-        }
-
-        .grid  li {
-          -webkit-flex-basis: 50%;
-          flex-basis: 50%;
-          max-width: 50%;
-        }
-      }
-
     </style>
-<!--
-    <app-route
-        route="[[route]]"
-        pattern="/:category"
-        data="{{routeData}}"
-        >
-    </app-route> -->
 
     <shop-category-data
         id="categoryData"
@@ -96,22 +19,11 @@
         category="about"
         ></shop-category-data>
 
-    <header>
+    <div class="content">
       <h3>[[pageData.title]]</h3>
-      <!-- <img width="100" src="[[pageData.media]]" -->
-    </header>
-    <article>
-      <pre>
-        [[pageData.description]]
-      </pre>
-  </article>
-    <p class="center">
-    <!-- <shop-image alt="[[item.name]]" src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg"></shop-image> -->
-    <!-- <img width="1024"
-        alt="About ECKS Jewelry"
-        src="https://scontent.xx.fbcdn.net/t31.0-8/14711180_1792697227677185_3527197465895752614_o.jpg" /> -->
+      <article>[[pageData.description]]</article>
+    </div>
 
-    </p>
   </template>
 
   <script>
@@ -125,8 +37,6 @@
       _onPageData: function(e) {
           this.set('pageData', e.detail);
       },
-
-
     });
   </script>
 

@@ -90,6 +90,8 @@
           type: Object,
           value: {
             'about': '1793752087571699',
+            'contact': '1794057164207858',
+            'buy': '1794057374207837',
           }
         },
 
@@ -99,10 +101,6 @@
           notify: true,
         }
       },
-
-      // ready: function(){
-      //     this._fetchPage('about');
-      // },
 
       _getCategoryObject: function(categoryName) {
         // console.log('_getCategoryObject');
@@ -115,7 +113,7 @@
       },
 
       _computeCategory: function(categoryName) {
-        if (categoryName === 'about' || categoryName === 'contact') {
+        if (categoryName === 'about' || categoryName === 'contact' || categoryName === 'buy') {
           return this._fetchPage(categoryName);
         }
 
@@ -141,11 +139,12 @@
           url : `${this.fbBaseUrl}/${resourceId}/?access_token=${this.fbAccessToken}&fields=attachments{description,media,title}`,
           onLoad: function(e) {
             const res = JSON.parse(e.target.responseText);
+            const media = res.attachments.data[0].media !== undefined ? res.attachments.data[0].media.image.src : '';
             const pageData = {
               page: pageName,
               title: res.attachments.data[0].title,
-              description: res.attachments.data[0].description,
-              media: res.attachments.data[0].media.image.src,
+              description: res.attachments.data[0].description.trim(),
+              media,
             };
             this.fire('page-data-loaded', pageData);
           }
