@@ -268,7 +268,9 @@
 
               <shop-tab name="Home"><a href="/#/">Home</a></shop-tab>
               <shop-tab name="About"><a href="/#/about">About</a></shop-tab>
-              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>|
+              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>
+              <shop-tab name="Buy"><a href="/#/buy">Where to Buy</a></shop-tab>|
+
             <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
               <shop-tab name="[[category.name]]" hidden$="[[category.hidden_from_nav]]">
                 <a href="/#/list/[[category.name]]">[[category.title]]</a>
@@ -294,6 +296,7 @@
           <hr />
           <a href="/#/about">About</a>
           <a href="/#/contact">Contact</a>
+          <a href="/#/buy">Where to Buy</a>
           <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
         </iron-selector>
       </app-drawer>
@@ -307,6 +310,7 @@
 
       <shop-about name="about"></shop-about>
       <shop-contact name="contact"></shop-contact>
+      <shop-buy name="buy"></shop-buy>
 
       <!-- cart view -->
       <!-- <shop-cart name="cart" cart="[[cart]]" total="[[total]]"></shop-cart> -->
@@ -320,6 +324,7 @@
       <a href="/#/">Home</a> |
       <a href="/#/about">About</a> |
       <a href="/#/contact">Contact</a> |
+      <a href="/#/contact">Where to Buy</a> |
       <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
       Created by <a href="https://knncreative.com">KNN Creative</a>
       <!-- <div class="demo-label">Demo Only</div> -->

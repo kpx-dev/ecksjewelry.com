@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shop-category-data.html">
+<link rel="import" href="shop-common-styles.html">
+
+<dom-module id="shop-buy">
+
+  <template>
+
+    <style include="shop-common-styles">
+      article {
+        text-align: justify;
+        padding: 0 10px 0 0;
+      }
+    </style>
+
+    <shop-category-data
+        id="categoryData"
+        category-name="buy"
+        category="buy"
+        ></shop-category-data>
+
+    <div class="content">
+      <h3>[[pageData.title]]</h3>
+      <article>[[pageData.description]]</article>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'shop-buy',
+
+      listeners: {
+        'page-data-loaded': '_onPageData',
+      },
+
+      _onPageData: function(e) {
+          this.set('pageData', e.detail);
+      },
+    });
+  </script>
+
+</dom-module>
