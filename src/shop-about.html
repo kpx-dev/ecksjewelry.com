@@ -5,8 +5,13 @@
 <dom-module id="shop-about">
 
   <template>
-
     <style include="shop-common-styles">
+      h1 {text-align: center;}
+      .about {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 40px;
+      }
     </style>
 
     <shop-category-data
@@ -16,8 +21,8 @@
         ></shop-category-data>
 
     <div class="content">
-      <h3>[[pageData.title]]</h3>
-      <p class="pre-text-content">[[pageData.description]]</p>
+      <h1>[[pageData.title]]</h1>
+      <p class="pre-text-content about">[[pageData.description]]</p>
     </div>
 
   </template>
