@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/marked-element/marked-element.html">
 <link rel="import" href="shop-category-data.html">
 <link rel="import" href="shop-common-styles.html">
 
@@ -7,6 +8,10 @@
   <template>
 
     <style include="shop-common-styles">
+      .markdown-html li {
+        list-style-type: none;
+      }
+
     </style>
 
     <shop-category-data
@@ -17,7 +22,12 @@
 
     <div class="content">
       <h3>[[pageData.title]]</h3>
-      <p class="pre-text-content">[[pageData.description]]</p>
+
+      <marked-element markdown="[[pageData.description]]">
+        <div class="markdown-html"></div>
+      </marked-element>
+
+      <!-- <p class="pre-text-content">[[pageData.description]]</p> -->
     </div>
 
   </template>
@@ -31,6 +41,7 @@
       },
 
       _onPageData: function(e) {
+        console.log(e.detail);
         this.set('pageData', e.detail);
       },
     });
