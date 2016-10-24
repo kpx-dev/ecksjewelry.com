@@ -7,9 +7,10 @@
   <template>
 
     <style include="shop-common-styles">
-      article {
-        text-align: justify;
+      .text-content {
         padding: 0 10px 0 0;
+        text-align:justify;
+        white-space: pre-line;
       }
     </style>
 
@@ -21,7 +22,7 @@
 
     <div class="content">
       <h3>[[pageData.title]]</h3>
-      <article>[[pageData.description]]</article>
+      <p>[[pageData.description]]</p>
     </div>
 
   </template>

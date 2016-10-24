@@ -7,11 +7,11 @@
   <template>
 
     <style include="shop-common-styles">
-      article, pre {
+      .text-content {
         padding: 0 10px 0 0;
         text-align:justify;
+        white-space: pre-line;
       }
-      
     </style>
 
     <shop-category-data
@@ -22,11 +22,9 @@
 
     <div class="content">
       <h3>[[pageData.title]]</h3>
-      <article>
-        <pre>
-          [[pageData.description]]
-        </pre>
-      </article>
+      <p class="text-content">
+        [[pageData.description]]
+      </p>
     </div>
 
   </template>
@@ -40,7 +38,6 @@
       },
 
       _onPageData: function(e) {
-        // console.log(e.detail);
         this.set('pageData', e.detail);
       },
     });
