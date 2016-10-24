@@ -8,8 +8,13 @@
 
     <style include="shop-common-styles">
       article {
-        text-align: justify;
         padding: 0 10px 0 0;
+      }
+      pre {
+        /*color: red;*/
+        /*padding-left: 50px;*/
+        /*text-align: center;*/
+        text-align:justify;
       }
     </style>
 
@@ -21,7 +26,11 @@
 
     <div class="content">
       <h3>[[pageData.title]]</h3>
-      <article>[[pageData.description]]</article>
+      <article>
+        <pre>
+          [[pageData.description]]
+        </pre>
+      </article>
     </div>
 
   </template>
@@ -35,7 +44,8 @@
       },
 
       _onPageData: function(e) {
-          this.set('pageData', e.detail);
+        // console.log(e.detail);
+        this.set('pageData', e.detail);
       },
     });
   </script>
