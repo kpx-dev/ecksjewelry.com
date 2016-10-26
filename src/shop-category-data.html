@@ -73,7 +73,8 @@
 
         fbAccessToken: {
           type: String,
-          value: '1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs',
+          // value: '1145002862248363|KUTis3E4849zqRldFAmkG32Uqvs',
+          value: 'EAAQRX8DfAasBAEb5kIEuLrtXlUsZAORpZAEbBPeYgy9SGrolfhZCnXJ8S0PkAogRHy8pD175m4EJrF0xNIZBT3PU8OiFh8VgwyXdvQCyhDIRDRIBfEtN3d8pzRbqNtWdtdqTRYXIlgnJylKiaRI9IJGXOTFVrnqIwDXSydd8ssS8CN9vqU2ZA',
         },
 
         fbPageId: {
@@ -93,6 +94,11 @@
             'contact': '1794057164207858',
             'buy': '1794057374207837',
           }
+        },
+
+        pageAuthors: {
+          type: Array,
+          value: ['1573553162924927', '10100255062824115', '100000586632472'],
         },
 
         pageData: {
@@ -166,7 +172,7 @@
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
             const categories = [];
-            const pageAuthor = this.pageId;
+            // const pageAuthor = this.pageId;
 
             // console.log(photos.photos.data)
             photos.photos.data.forEach((e) => {
@@ -184,16 +190,14 @@
               });
 
               // console.log(e.comments);
-
               if (e.comments !== undefined) {
                 e.comments.data.forEach((c) => {
-                  if (c.from.id === pageAuthor) {
-                    // console.log(c.message);
-                    // console.log(c.attachment.media.image.src);
-                    // console.log(full);
+                  // console.log(c.from.id, this.pageAuthors);
+                  if (this.pageAuthors.indexOf(c.from.id) !== -1) {
                     full.push(c.attachment.media.image.src);
                   }
                 });
+                // console.log(full);
               }
 
               if (e.name) {
@@ -219,7 +223,7 @@
 
             });
 
-            // console.log(categories);
+            // console.log(categories[6]);
             this.set('category.items', categories);
           },
           onError: function(e) {

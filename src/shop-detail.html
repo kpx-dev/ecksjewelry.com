@@ -105,7 +105,7 @@
         }
 
         image-slider {
-          --image-slider-max-width: 767px;
+          --image-slider-max-width: 350px;
         }
         /*shop-image {
           margin: 0;
@@ -150,9 +150,10 @@
         failure="{{failure}}"></shop-category-data>
 
 
-      <!-- <image-slider images="[[item.full]]"></image-slider> -->
+
     <div id="content" hidden$="[[failure]]">
-      <shop-image src="[[item.full.0]]"></shop-image>
+      <!-- <shop-image src="[[item.full.0]]"></shop-image> -->
+      <image-slider images="[[item.full]]"></image-slider>
 
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.title]]</h1>
