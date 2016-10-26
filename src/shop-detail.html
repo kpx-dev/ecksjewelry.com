@@ -149,11 +149,9 @@
         item="{{item}}"
         failure="{{failure}}"></shop-category-data>
 
-
-
     <div id="content" hidden$="[[failure]]">
-      <!-- <shop-image src="[[item.full.0]]"></shop-image> -->
-      <image-slider images="[[item.full]]"></image-slider>
+      <shop-image src="[[item.full.0]]" hidden$="{{showImageGallery(item)}}"></shop-image>
+      <image-slider images="[[item.full]]" hidden$="{{!showImageGallery(item)}}"></image-slider>
 
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.title]]</h1>
@@ -208,6 +206,12 @@
       observers: [
         '_itemChanged(item, visible)'
       ],
+
+      showImageGallery: (images) => {
+        // console.log('showImageGallery', images);
+        console.log(images.full, images.full.length, images.full.length > 1);
+        return images.full.length > 1;
+      },
 
       _itemChanged: function(item, visible) {
         if (visible) {
