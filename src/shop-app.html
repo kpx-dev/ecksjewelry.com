@@ -267,9 +267,10 @@
           <shop-tabs selected="[[categoryName]]" attr-for-selected="name">
 
               <shop-tab name="Home"><a href="/#/">Home</a></shop-tab>
-              <shop-tab name="About"><a href="/#/about">About</a></shop-tab>
-              <shop-tab name="Contact"><a href="/#/contact">Contact</a></shop-tab>
-              <shop-tab name="Buy"><a href="/#/buy">Where to Buy</a></shop-tab>|
+              <shop-tab name="About Ecks Jewelry"><a href="/#/about">About</a></shop-tab>
+              <shop-tab name="Custom Made Jewelry"><a href="/#/custom-made-jewelry">Custom Made Jewelry</a></shop-tab>
+              <shop-tab name="Contact Ecks Jewelry"><a href="/#/contact">Contact</a></shop-tab>
+              <shop-tab name="Where to buy Ecks Jewelry"><a href="/#/buy">Where to Buy</a></shop-tab>|
 
             <template is="dom-repeat" items="[[categories]]" as="category" initial-count="3">
               <shop-tab name="[[category.name]]" hidden$="[[category.hidden_from_nav]]">
@@ -294,10 +295,11 @@
             <a name="[[category.name]]" href="/#/list/[[category.name]]" hidden$="[[category.hidden_from_nav]]">[[category.title]]</a>
           </template>
           <hr />
-          <a href="/#/about">About</a>
-          <a href="/#/contact">Contact</a>
-          <a href="/#/buy">Where to Buy</a>
-          <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
+          <a name="about" href="/#/about">About</a>
+          <a name="custom-made-jewelry" href="/#/custom-made-jewelry">Custom Made Jewelry</a>
+          <a name="contact" href="/#/contact">Contact</a>
+          <a name="buy" href="/#/buy">Where to Buy</a>
+          <a href="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
         </iron-selector>
       </app-drawer>
     </template>
@@ -309,6 +311,7 @@
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
 
       <shop-about name="about"></shop-about>
+      <shop-custom-made-jewelry name="custom-made-jewelry"></shop-custom-made-jewelry>
       <shop-contact name="contact"></shop-contact>
       <shop-buy name="buy"></shop-buy>
 
@@ -316,18 +319,17 @@
       <!-- <shop-cart name="cart" cart="[[cart]]" total="[[total]]"></shop-cart> -->
       <!-- checkout view -->
       <!-- <shop-checkout name="checkout" cart="[[cart]]" total="[[total]]" route="{{subroute}}"></shop-checkout> -->
-
       <shop-404-warning name="404"></shop-404-warning>
     </iron-pages>
 
     <footer>
-      <a href="/#/">Home</a> |
-      <a href="/#/about">About</a> |
-      <a href="/#/contact">Contact</a> |
-      <a href="/#/buy">Where to Buy</a> |
+      <a name="home" href="/#/">Home</a> |
+      <a name="about" href="/#/about">About</a> |
+      <a name="custom-made-jewelry" href="/#/custom-made-jewelry">Custom Made Jewelry</a> |
+      <a name="contact" href="/#/contact">Contact</a> |
+      <a name="buy" href="/#/buy">Where to Buy</a> |
       <a href ="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
       Created by <a href="https://knncreative.com">KNN Creative</a>
-      <!-- <div class="demo-label">Demo Only</div> -->
     </footer>
 
     <!-- a11y announcer -->

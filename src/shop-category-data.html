@@ -93,6 +93,7 @@
             'about': '1793752087571699',
             'contact': '1794057164207858',
             'buy': '1794057374207837',
+            'custom-made-jewelry': '1796165737330334',
           }
         },
 
@@ -119,7 +120,7 @@
       },
 
       _computeCategory: function(categoryName) {
-        if (categoryName === 'about' || categoryName === 'contact' || categoryName === 'buy') {
+        if (categoryName === 'about' || categoryName === 'contact' || categoryName === 'buy' || categoryName == 'custom-made-jewelry') {
           return this._fetchPage(categoryName);
         }
 
@@ -140,7 +141,7 @@
       _fetchPage: function(pageName) {
         const pageId = this.pageId[pageName];
         const resourceId = `${this.fbPageId}_${pageId}`;
-
+        // console.log(pageId, resourceId);
         this._getResource({
           url : `${this.fbBaseUrl}/${resourceId}/?access_token=${this.fbAccessToken}&fields=attachments{description,media,title}`,
           onLoad: function(e) {

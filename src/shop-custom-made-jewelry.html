@@ -1,47 +1,42 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/marked-element/marked-element.html">
 <link rel="import" href="shop-category-data.html">
 <link rel="import" href="shop-common-styles.html">
 
-<dom-module id="shop-buy">
+<dom-module id="shop-custom-made-jewelry">
 
   <template>
-
     <style include="shop-common-styles">
-      .markdown-html li {
-        list-style-type: none;
+      h1 {text-align: center;}
+      .about {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 40px;
       }
-
     </style>
 
     <shop-category-data
         id="categoryData"
-        category-name="buy"
-        category="buy"
+        category-name="custom-made-jewelry"
+        category="custom-made-jewelry"
         ></shop-category-data>
 
     <div class="content">
-      <h3>[[pageData.title]]</h3>
-
-      <marked-element markdown="[[pageData.description]]">
-        <div class="markdown-html"></div>
-      </marked-element>
-
-      <!-- <p class="pre-text-content">[[pageData.description]]</p> -->
+      <h1>[[pageData.title]]</h1>
+      <p class="pre-text-content about">[[pageData.description]]</p>
     </div>
 
   </template>
 
   <script>
     Polymer({
-      is: 'shop-buy',
+      is: 'shop-custom-made-jewelry',
 
       listeners: {
         'page-data-loaded': '_onPageData',
       },
 
       _onPageData: function(e) {
-        // console.log(e.detail);
+        // console.log('hi', e.detail);
         this.set('pageData', e.detail);
       },
     });
