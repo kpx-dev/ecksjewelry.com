@@ -268,7 +268,7 @@
 
               <shop-tab name="Home"><a href="/#/">Home</a></shop-tab>
               <shop-tab name="About Ecks Jewelry"><a href="/#/about">About</a></shop-tab>
-              <!-- <shop-tab name="Custom Made Jewelry"><a href="/#/custom-made-jewelry">Custom Made Jewelry</a></shop-tab> -->
+              <shop-tab name="Custom Made Jewelry"><a href="/#/custom-made-jewelry">Custom Made Jewelry</a></shop-tab>
               <shop-tab name="Contact Ecks Jewelry"><a href="/#/contact">Contact</a></shop-tab>
               <shop-tab name="Where to buy Ecks Jewelry"><a href="/#/buy">Where to Buy</a></shop-tab>|
 
@@ -296,7 +296,7 @@
           </template>
           <hr />
           <a name="about" href="/#/about">About</a>
-          <!-- <a name="custom-made-jewelry" href="/#/custom-made-jewelry">Custom Made Jewelry</a> -->
+          <a name="custom-made-jewelry" href="/#/custom-made-jewelry">Custom Made Jewelry</a>
           <a name="contact" href="/#/contact">Contact</a>
           <a name="buy" href="/#/buy">Where to Buy</a>
           <a href="https://www.facebook.com/ecksjewelry/">Folow us on Facebook!</a>
@@ -311,7 +311,7 @@
       <shop-detail name="detail" route="[[subroute]]" offline="[[offline]]"></shop-detail>
 
       <shop-about name="about"></shop-about>
-      <!-- <shop-custom-made-jewelry name="custom-made-jewelry"></shop-custom-made-jewelry> -->
+      <shop-custom-made-jewelry name="custom-made-jewelry"></shop-custom-made-jewelry>
       <shop-contact name="contact"></shop-contact>
       <shop-buy name="buy"></shop-buy>
 
@@ -556,7 +556,11 @@
       },
 
       _computeShouldShowTabs: function(page, smallScreen) {
-        return (page === 'home' || page === 'list' || page === 'detail' || page === 'about' || page === 'contact') && !smallScreen;
+        // return (page === 'home' || page === 'list' || page === 'detail' || page === 'about' || page === 'contact') && !smallScreen;
+        if (smallScreen) {
+          return false;
+        }
+        return true;
       },
 
       _computeShouldRenderTabs: function(_shouldShowTabs, loadComplete) {
