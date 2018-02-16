@@ -192,8 +192,8 @@
               // console.log(e.comments);
               if (e.comments !== undefined) {
                 e.comments.data.forEach((c) => {
-                  // console.log(c.from.id, this.pageAuthors);
-                  if (this.pageAuthors.indexOf(c.from.id) !== -1) {
+                  // console.log(c.from);
+                  if (c && c.from && this.pageAuthors.indexOf(c.from.id) !== -1) {
                     full.push(c.attachment.media.image.src);
                   }
                 });
