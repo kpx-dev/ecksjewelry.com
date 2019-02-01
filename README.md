@@ -3,7 +3,6 @@
 ### Setup
 
     npm install -g polymer-cli
-    bower install
 
 ### Start
 
