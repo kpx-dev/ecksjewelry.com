@@ -70,10 +70,16 @@
           notify: true,
           readOnly: true
         },
+        // https://developers.facebook.com/tools/explorer
         fbAccessToken: {
           type: String,
           value: 'EAAQRX8DfAasBAEUUBYIsd1Fi3ZC7gWurMJPEifgwdFQMLHXXLIrKrfeZCECImVreQyKHbIFwINXs5OrqzCZChIms1LxG4jF1LgGheBBtJQZCrWi6wnPdBFj2ibtYrcM1WUZA1iRcPw2TP67IAcfsZCxJZCtcHIPiUdZBtI5e0cxaLu2EisZAdnf9r',
         },
+        // https://developers.facebook.com/docs/graph-api/securing-requests/
+        // fbAppSecretProof: {
+        //   type: String,
+        //   value: '30a18b0f3567fd14a21382d9cb1cfd3591e88a74ab14e0643368c0be6d464a3b',
+        // },
         fbPageId: {
           type: String,
           value: '1573553162924927',
@@ -81,7 +87,7 @@
 
         fbBaseUrl: {
           type: String,
-          value: 'https://graph.facebook.com/v3.2/',
+          value: 'https://graph.facebook.com/v8.0',
         },
 
         pageId: {
@@ -140,6 +146,7 @@
         const resourceId = `${this.fbPageId}_${pageId}`;
         // console.log(pageId, resourceId);
         this._getResource({
+          // &appsecret_proof=${this.fbAppSecretProof}
           url : `${this.fbBaseUrl}/${resourceId}/?access_token=${this.fbAccessToken}&fields=attachments{description,media,title}`,
           onLoad: function(e) {
             const res = JSON.parse(e.target.responseText);
@@ -166,7 +173,8 @@
           return;
         }
         this._getResource({
-          url : `${this.fbBaseUrl}/${category.album_id}/?access_token=${this.fbAccessToken}&fields=photos.limit(100){images,name,comments{attachment,message,from}}`,
+          // &appsecret_proof=${this.fbAppSecretProof}
+          url : `${this.fbBaseUrl}/${category.album_id}/?access_token=${this.fbAccessToken}&fields=photos.limit(100){images,name}`,
           onLoad: function(e) {
             var photos = JSON.parse(e.target.responseText);
             const categories = [];
