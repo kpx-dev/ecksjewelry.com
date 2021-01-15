@@ -24,7 +24,11 @@
 
     <div class="content">
       <h3>[[pageData.title]]</h3>
-      <p class="pre-text-content">[[pageData.description]]</p>
+      <!-- <p class="pre-text-content">[[pageData.description]]</p> -->
+      <p>
+        (909) 833-0704<br />
+        info@ecksjewelry.com
+      </p>
     </div>
 
   </template>
@@ -33,13 +37,13 @@
     Polymer({
       is: 'shop-contact',
 
-      listeners: {
-        'page-data-loaded': '_onPageData',
-      },
+      // listeners: {
+      //   'page-data-loaded': '_onPageData',
+      // },
 
-      _onPageData: function(e) {
-          this.set('pageData', e.detail);
-      },
+      // _onPageData: function(e) {
+      //     this.set('pageData', e.detail);
+      // },
     });
   </script>
 

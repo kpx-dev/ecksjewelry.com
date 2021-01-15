@@ -14,15 +14,18 @@
       }
     </style>
 
-    <shop-category-data
+    <!-- <shop-category-data
         id="categoryData"
         category-name="about"
         category="about"
-        ></shop-category-data>
+        ></shop-category-data> -->
 
     <div class="content">
       <h1>[[pageData.title]]</h1>
-      <p class="pre-text-content about">[[pageData.description]]</p>
+      <!-- <p class="pre-text-content about">[[pageData.description]]</p> -->
+      <p>
+        We are a hybrid jewelry company that does not mimic the ordinary. Focusing on images that inspires us, creating designs that are unique and revolutionary. We are Eckstreme, Eckstraordinary and the Ecks-factor of jewelry.
+      </p>
     </div>
 
   </template>
@@ -31,13 +34,13 @@
     Polymer({
       is: 'shop-about',
 
-      listeners: {
-        'page-data-loaded': '_onPageData',
-      },
+      // listeners: {
+      //   'page-data-loaded': '_onPageData',
+      // },
 
-      _onPageData: function(e) {
-          this.set('pageData', e.detail);
-      },
+      // _onPageData: function(e) {
+      //     this.set('pageData', e.detail);
+      // },
     });
   </script>
 
