@@ -1,0 +1,94 @@
+<template>
+    <header class="header-global">
+        <base-nav class="navbar-main" transparent type="" effect="light" expand>
+            <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
+                Ecks Jewelry
+            </router-link>
+
+            <div class="row" slot="content-header" slot-scope="{closeMenu}">
+                <div class="col-6 collapse-brand">
+                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
+                        <img src="img/brand/blue.png">
+                    </a>
+                </div>
+                <div class="col-6 collapse-close">
+                    <close-button @click="closeMenu"></close-button>
+                </div>
+            </div>
+
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Pendants</span>
+                </a>
+
+                <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Rings</span>
+                </a>
+
+                <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Cufflinks</span>
+                </a>
+
+            </ul>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+
+                <li class="nav-item">
+                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">About</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Contact</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <span class="nav-link-inner--text">Shop Retail</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://www.facebook.com/ecksjewelry/" target="_blank" rel="noopener"
+                       data-toggle="tooltip" title="Like us on Facebook">
+                        <i class="fa fa-facebook-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                    </a>
+                </li>
+
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                    <a href="https://www.tribalhollywood.com/collections/ecks-mens-jewelry" target="_blank" rel="noopener"
+                       class="btn btn-neutral btn-icon">
+                        <span class="btn-inner--icon">
+                        <i class="fa fa-shopping-cart mr-2"></i>
+                        </span>
+                        <span class="nav-link-inner--text">Shop Online</span>
+                    </a>
+                </li>
+            </ul>
+        </base-nav>
+    </header>
+</template>
+<script>
+import BaseNav from "@/components/BaseNav";
+import BaseDropdown from "@/components/BaseDropdown";
+import CloseButton from "@/components/CloseButton";
+
+export default {
+  components: {
+    BaseNav,
+    CloseButton,
+    BaseDropdown
+  }
+};
+</script>
+<style>
+</style>
