@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2470fcf294499be5fd2c",
+    "revision": "af4610dc1146f3564224",
     "url": "/css/app.af950ffc.css"
   },
   {
-    "revision": "2470fcf294499be5fd2c",
-    "url": "/js/app.a3892dbf.js"
+    "revision": "af4610dc1146f3564224",
+    "url": "/js/app.ce87e9b7.js"
   },
   {
     "revision": "3cf28887b01df99f7b07",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/img/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "2b6feba9609ad231f9063eaac7949401",
+    "revision": "ea11674fe046acb1872917b2af4e4dd0",
     "url": "/index.html"
   },
   {
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/favicon.png"
   },
   {
-    "revision": "185288d13ed8e9d745bd279ea34667bf",
-    "url": "/img/brand/blue.png"
-  },
-  {
     "revision": "c85c75275c0a0a617f9e5accc2700908",
     "url": "/img/brand/creativetim-white-slim.png"
+  },
+  {
+    "revision": "185288d13ed8e9d745bd279ea34667bf",
+    "url": "/img/brand/blue.png"
   },
   {
     "revision": "b9949387c6179e2dc4c675134a7b7935",
@@ -96,28 +96,56 @@ self.__precacheManifest = [
     "url": "/img/home/1.jpg"
   },
   {
+    "revision": "cc129d87ca42692b9525c8ca1ed1ee46",
+    "url": "/img/home/1.webp"
+  },
+  {
     "revision": "662ea986f90a61daffeefa753fc42d65",
     "url": "/img/home/10.jpg"
+  },
+  {
+    "revision": "1c6b1d3cdf6ddecf14f8be2c00463c04",
+    "url": "/img/home/10.webp"
   },
   {
     "revision": "b384d1e9ae1c5ec6b71e48dd4eb3074d",
     "url": "/img/home/11.jpg"
   },
   {
+    "revision": "88d7f824dfb76c7ed1fa25b26de82736",
+    "url": "/img/home/11.webp"
+  },
+  {
     "revision": "5951e4abd919ac27249ecf0bc4817b99",
     "url": "/img/home/12.jpg"
+  },
+  {
+    "revision": "dc031c64c3c3fdc20595dfb40a9d4a43",
+    "url": "/img/home/12.webp"
   },
   {
     "revision": "b3bb026313cff4bcf1a21559bebd5aac",
     "url": "/img/home/13.jpg"
   },
   {
+    "revision": "f1f151e5db4250e0624d0e80edc64eac",
+    "url": "/img/home/13.webp"
+  },
+  {
     "revision": "1f916185fb6d15939715dbdf1d8935f1",
     "url": "/img/home/14.jpg"
   },
   {
+    "revision": "f34cc00ad734cb3821d8c5aebadf6c74",
+    "url": "/img/home/14.webp"
+  },
+  {
     "revision": "c35e27e0a7a0acdafc831d6992982897",
     "url": "/img/home/15.jpg"
+  },
+  {
+    "revision": "b0d3cb42700e391856e5ec1d4e20c9a5",
+    "url": "/img/home/15.webp"
   },
   {
     "revision": "09ee70fbf73113c15cfcb5b8d195619f",
@@ -128,24 +156,56 @@ self.__precacheManifest = [
     "url": "/img/home/2.jpg"
   },
   {
+    "revision": "b627fb18e848f300f050cc630c381426",
+    "url": "/img/home/16.webp"
+  },
+  {
     "revision": "7d2789612806bb7da7944bfc5a2f618a",
     "url": "/img/home/3.jpg"
+  },
+  {
+    "revision": "370f512e22a007546976d19e7a1f339d",
+    "url": "/img/home/3.webp"
+  },
+  {
+    "revision": "1d6fb7a9889b5dd40167b6447b29d96f",
+    "url": "/img/home/4.webp"
+  },
+  {
+    "revision": "d729e62994cdf45e76bd0b36faab2485",
+    "url": "/img/home/5.webp"
   },
   {
     "revision": "a3851a51da697af7bfea0298fb826b9a",
     "url": "/img/home/5.jpg"
   },
   {
-    "revision": "5ad1a7860f95c7f89197d2d3fd7e8402",
-    "url": "/img/home/7.jpg"
+    "revision": "0c45b66f0762033338d5f656c58a437e",
+    "url": "/img/home/6.webp"
   },
   {
     "revision": "a89e352b2ec3e1051e00cabcf6c92208",
     "url": "/img/home/6.jpg"
   },
   {
+    "revision": "bd7bc7de93e79082a45f0f04c81645c7",
+    "url": "/img/home/7.webp"
+  },
+  {
+    "revision": "5ad1a7860f95c7f89197d2d3fd7e8402",
+    "url": "/img/home/7.jpg"
+  },
+  {
+    "revision": "9a8802cac4c639565861a1bae4046a53",
+    "url": "/img/home/8.webp"
+  },
+  {
     "revision": "aa5f70fd48d91f89b96f865b705fb1ad",
     "url": "/img/home/8.jpg"
+  },
+  {
+    "revision": "59afa094736ef537639331d714800bc4",
+    "url": "/img/home/9.webp"
   },
   {
     "revision": "5ba768f841cca2482a3d03cf97cecf3c",
@@ -160,16 +220,16 @@ self.__precacheManifest = [
     "url": "/img/pendants/1.jpg"
   },
   {
-    "revision": "4c22fb134b24a229551d09b561edadc5",
-    "url": "/img/pendants/11.jpg"
+    "revision": "a84abb7f81e85bd3448995098d7cd5fb",
+    "url": "/img/pendants/10.jpg"
   },
   {
     "revision": "b11a42b893442eb08bc20f42b7dcccc1",
     "url": "/img/pendants/12.jpg"
   },
   {
-    "revision": "a84abb7f81e85bd3448995098d7cd5fb",
-    "url": "/img/pendants/10.jpg"
+    "revision": "4c22fb134b24a229551d09b561edadc5",
+    "url": "/img/pendants/11.jpg"
   },
   {
     "revision": "293330a26cc1f5ca090f7c74309e9a88",
@@ -180,8 +240,8 @@ self.__precacheManifest = [
     "url": "/img/pendants/14.jpg"
   },
   {
-    "revision": "b28e438ad9d35f9162ad1adc1805fb85",
-    "url": "/img/pendants/16.jpg"
+    "revision": "4b4808c117d7cb1d4dc4e4b81260fd7f",
+    "url": "/img/pendants/15.jpg"
   },
   {
     "revision": "f0cb804fa2896d8274dd92a6cb0b5d64",
@@ -190,6 +250,10 @@ self.__precacheManifest = [
   {
     "revision": "56a357520a77f8855cbc134e4773689c",
     "url": "/img/pendants/18.jpg"
+  },
+  {
+    "revision": "b28e438ad9d35f9162ad1adc1805fb85",
+    "url": "/img/pendants/16.jpg"
   },
   {
     "revision": "f280bfd6746a49614bbe803c568e55cf",
@@ -212,20 +276,24 @@ self.__precacheManifest = [
     "url": "/img/pendants/22.jpg"
   },
   {
-    "revision": "eee9e834d36473d6282d86590c7bd156",
-    "url": "/img/pendants/23.jpg"
-  },
-  {
-    "revision": "e770f915e918cc19714b4ea943ed1ff9",
-    "url": "/img/pendants/25.jpg"
+    "revision": "f0d752019e76d2cd337760cd26951f26",
+    "url": "/img/home/2.webp"
   },
   {
     "revision": "7979dfb697fdf248b593c3e8d6a77013",
     "url": "/img/pendants/24.jpg"
   },
   {
+    "revision": "e770f915e918cc19714b4ea943ed1ff9",
+    "url": "/img/pendants/25.jpg"
+  },
+  {
     "revision": "6371b4eb21720566728f7485d81b8b8a",
     "url": "/img/pendants/26.jpg"
+  },
+  {
+    "revision": "06bc04836864e7af98ef5443f88d6126",
+    "url": "/img/pendants/28.jpg"
   },
   {
     "revision": "136876d98daa8840150745f97acf1f39",
@@ -234,10 +302,6 @@ self.__precacheManifest = [
   {
     "revision": "4a56056a24d1fb85a386e60610611d6e",
     "url": "/img/pendants/29.jpg"
-  },
-  {
-    "revision": "06bc04836864e7af98ef5443f88d6126",
-    "url": "/img/pendants/28.jpg"
   },
   {
     "revision": "01302ed57aa2d122efe12761cab79985",
@@ -256,12 +320,12 @@ self.__precacheManifest = [
     "url": "/img/pendants/32.jpg"
   },
   {
-    "revision": "95b6168af5120ac39322ecd4058aac8a",
-    "url": "/img/pendants/33.jpg"
-  },
-  {
     "revision": "93c4e9c69cdc5a21c7ed99c718042542",
     "url": "/img/pendants/34.jpg"
+  },
+  {
+    "revision": "95b6168af5120ac39322ecd4058aac8a",
+    "url": "/img/pendants/33.jpg"
   },
   {
     "revision": "0fb9b9218edad3ee9c446fc32d7a1c46",
@@ -288,20 +352,12 @@ self.__precacheManifest = [
     "url": "/img/pendants/4.jpg"
   },
   {
-    "revision": "66026d887fa3c8e36ae74477ab9f12a3",
-    "url": "/img/pendants/40.jpg"
-  },
-  {
-    "revision": "4b4808c117d7cb1d4dc4e4b81260fd7f",
-    "url": "/img/pendants/15.jpg"
-  },
-  {
     "revision": "ac40513baaf9b9bb14a90f6b4edab560",
     "url": "/img/pendants/41.jpg"
   },
   {
-    "revision": "4a00558b85e7c18250263680a2fa5dda",
-    "url": "/img/pendants/44.jpg"
+    "revision": "66026d887fa3c8e36ae74477ab9f12a3",
+    "url": "/img/pendants/40.jpg"
   },
   {
     "revision": "a454899d204eca160201d6654962c6ec",
@@ -312,12 +368,20 @@ self.__precacheManifest = [
     "url": "/img/pendants/43.jpg"
   },
   {
+    "revision": "4a00558b85e7c18250263680a2fa5dda",
+    "url": "/img/pendants/44.jpg"
+  },
+  {
     "revision": "e6f7b901df41e61e18aa3ba513c33412",
     "url": "/img/pendants/45.jpg"
   },
   {
     "revision": "6fa3f19bac9d86ecefe2314547fa4cf0",
     "url": "/img/pendants/46.jpg"
+  },
+  {
+    "revision": "72a16827b33a455daef8f1bb5bdd5378",
+    "url": "/img/pendants/48.jpg"
   },
   {
     "revision": "0bb01d57cc4e6e26da94604465f4ca0f",
@@ -336,32 +400,32 @@ self.__precacheManifest = [
     "url": "/img/pendants/50.jpg"
   },
   {
-    "revision": "9984b7f04406869004878df7ad994572",
-    "url": "/img/pendants/51.jpg"
-  },
-  {
-    "revision": "4bd3237245a833c75a4ab3042276ffc1",
-    "url": "/img/pendants/53.jpg"
-  },
-  {
     "revision": "02303e470b82e622ff0968c9410cac83",
     "url": "/img/pendants/52.jpg"
+  },
+  {
+    "revision": "9984b7f04406869004878df7ad994572",
+    "url": "/img/pendants/51.jpg"
   },
   {
     "revision": "8906525c9bfb88185e00a68b5ac151ae",
     "url": "/img/pendants/54.jpg"
   },
   {
+    "revision": "4bd3237245a833c75a4ab3042276ffc1",
+    "url": "/img/pendants/53.jpg"
+  },
+  {
     "revision": "7ce82494ea929fd132ae516e870209f3",
     "url": "/img/pendants/55.jpg"
   },
   {
-    "revision": "6ab078da3131f1b2071ff447ee03aa4a",
-    "url": "/img/pendants/57.jpg"
-  },
-  {
     "revision": "f3a582722c519416eb6df547c98c1c17",
     "url": "/img/pendants/56.jpg"
+  },
+  {
+    "revision": "6ab078da3131f1b2071ff447ee03aa4a",
+    "url": "/img/pendants/57.jpg"
   },
   {
     "revision": "2db7f95bd1b4af67f4f16707a3c314cd",
@@ -376,12 +440,12 @@ self.__precacheManifest = [
     "url": "/img/pendants/6.jpg"
   },
   {
-    "revision": "0c264c5e552c5814ad6e09cc8ff3f675",
-    "url": "/img/pendants/61.jpg"
-  },
-  {
     "revision": "cc99f9887e6883fa718f49799f028ff6",
     "url": "/img/pendants/60.jpg"
+  },
+  {
+    "revision": "0c264c5e552c5814ad6e09cc8ff3f675",
+    "url": "/img/pendants/61.jpg"
   },
   {
     "revision": "724155e1217dfd1b0a4a026b997e6358",
@@ -392,32 +456,20 @@ self.__precacheManifest = [
     "url": "/img/pendants/63.jpg"
   },
   {
-    "revision": "eaa4c1b6189be006e9768a80932895ff",
-    "url": "/img/pendants/7.jpg"
-  },
-  {
     "revision": "36e397b4a5dd2a5c000cd0fef55264aa",
     "url": "/img/pendants/64.jpg"
-  },
-  {
-    "revision": "b0c990ef0150c9ed3c0884ec69429b96",
-    "url": "/img/pendants/8.jpg"
-  },
-  {
-    "revision": "6224f8201b989e19e8731831aa111a98",
-    "url": "/img/pendants/9.jpg"
-  },
-  {
-    "revision": "5b31aba99dc3828964afdebb7267c8f5",
-    "url": "/img/rings/1.jpg"
   },
   {
     "revision": "f1dbc9c3f9b9f97f1054e205d8707c60",
     "url": "/img/rings/10.jpg"
   },
   {
-    "revision": "98c3a1fa8677345098a686499e78bb86",
-    "url": "/img/rings/12.jpg"
+    "revision": "5b31aba99dc3828964afdebb7267c8f5",
+    "url": "/img/rings/1.jpg"
+  },
+  {
+    "revision": "6224f8201b989e19e8731831aa111a98",
+    "url": "/img/pendants/9.jpg"
   },
   {
     "revision": "108ff144517fa02d22623bcd4193784f",
@@ -426,6 +478,10 @@ self.__precacheManifest = [
   {
     "revision": "1942fd8de8b46e242e67888d39ccd071",
     "url": "/img/rings/13.jpg"
+  },
+  {
+    "revision": "98c3a1fa8677345098a686499e78bb86",
+    "url": "/img/rings/12.jpg"
   },
   {
     "revision": "e22f2957bfe771f7ab69979d6317e04b",
@@ -440,20 +496,36 @@ self.__precacheManifest = [
     "url": "/img/rings/16.jpg"
   },
   {
-    "revision": "fe4fb248de0b32b96281f1b7a70727c6",
-    "url": "/img/rings/17.jpg"
-  },
-  {
     "revision": "63d6c24930ad2a3a40bba8d2da4f8480",
     "url": "/img/rings/18.jpg"
+  },
+  {
+    "revision": "fe4fb248de0b32b96281f1b7a70727c6",
+    "url": "/img/rings/17.jpg"
   },
   {
     "revision": "2619c9c1c9475f20f7a881fe99cd9897",
     "url": "/img/rings/2.jpg"
   },
   {
+    "revision": "f458e9f1f15687472a05064b466ecd38",
+    "url": "/img/rings/20.jpg"
+  },
+  {
     "revision": "056c6acb40184ffcc28be2eac1da847d",
     "url": "/img/rings/19.jpg"
+  },
+  {
+    "revision": "6184d8287221a6181244ad38b70a22dd",
+    "url": "/img/rings/22.jpg"
+  },
+  {
+    "revision": "74696bd1dee0b33377a24dc040492db1",
+    "url": "/img/rings/21.jpg"
+  },
+  {
+    "revision": "aaad0f774473ebb1e0db2103ae6d56ca",
+    "url": "/img/rings/23.jpg"
   },
   {
     "revision": "170052a5b7894f67b16864e895bd6ad7",
@@ -464,20 +536,16 @@ self.__precacheManifest = [
     "url": "/img/rings/25.jpg"
   },
   {
-    "revision": "f458e9f1f15687472a05064b466ecd38",
-    "url": "/img/rings/20.jpg"
-  },
-  {
     "revision": "41a7c7d2a319a112f0bb1b68f008eed7",
     "url": "/img/rings/26.jpg"
   },
   {
-    "revision": "3c43f886e88c28e4b4b834449316f1b5",
-    "url": "/img/rings/28.jpg"
-  },
-  {
     "revision": "dc6f95db259ae2536cfe24b336766ff7",
     "url": "/img/rings/27.jpg"
+  },
+  {
+    "revision": "3c43f886e88c28e4b4b834449316f1b5",
+    "url": "/img/rings/28.jpg"
   },
   {
     "revision": "810676367c802a6dceced81e250d79f1",
@@ -500,24 +568,12 @@ self.__precacheManifest = [
     "url": "/img/rings/32.jpg"
   },
   {
-    "revision": "2ceb17b251e5252e307a157efefb0396",
-    "url": "/img/rings/33.jpg"
-  },
-  {
-    "revision": "aaad0f774473ebb1e0db2103ae6d56ca",
-    "url": "/img/rings/23.jpg"
-  },
-  {
-    "revision": "20390a3219a95dfe25f6f65ab80b3d23",
-    "url": "/img/rings/34.jpg"
-  },
-  {
     "revision": "c460daf15c5bd677912ff86509451238",
     "url": "/img/rings/4.jpg"
   },
   {
-    "revision": "10db8a0851494867e79e9e2c10c36237",
-    "url": "/img/rings/6.jpg"
+    "revision": "20390a3219a95dfe25f6f65ab80b3d23",
+    "url": "/img/rings/34.jpg"
   },
   {
     "revision": "7144c717bc0a19b1a535b898d936261c",
@@ -528,20 +584,24 @@ self.__precacheManifest = [
     "url": "/img/rings/7.jpg"
   },
   {
-    "revision": "fcbdb0c223a14c2efaceaf0b58f43ec4",
-    "url": "/img/rings/8.jpg"
+    "revision": "10db8a0851494867e79e9e2c10c36237",
+    "url": "/img/rings/6.jpg"
   },
   {
     "revision": "84bc38b9a26ceb8471c8c67335e76ace",
     "url": "/img/rings/9.jpg"
   },
   {
-    "revision": "7789b5bfa57722dd8916b1b9ff1b1d37",
-    "url": "/img/theme/img-2-1200x1000.jpg"
+    "revision": "fcbdb0c223a14c2efaceaf0b58f43ec4",
+    "url": "/img/rings/8.jpg"
   },
   {
-    "revision": "dc49ad52655e1d9d0552c026db3ef688",
-    "url": "/img/theme/landing.jpg"
+    "revision": "fd4a34d026fb9e0f4867188d47b11ba8",
+    "url": "/img/theme/img-1-1200x1000.jpg"
+  },
+  {
+    "revision": "7789b5bfa57722dd8916b1b9ff1b1d37",
+    "url": "/img/theme/img-2-1200x1000.jpg"
   },
   {
     "revision": "20d702b83a06bdb2ea71c4c0cb9a7a56",
@@ -552,8 +612,8 @@ self.__precacheManifest = [
     "url": "/img/theme/promo-1.png"
   },
   {
-    "revision": "fd4a34d026fb9e0f4867188d47b11ba8",
-    "url": "/img/theme/img-1-1200x1000.jpg"
+    "revision": "dc49ad52655e1d9d0552c026db3ef688",
+    "url": "/img/theme/landing.jpg"
   },
   {
     "revision": "edc7106b21ec12e57022b2ebd534cd2d",
@@ -572,19 +632,23 @@ self.__precacheManifest = [
     "url": "/img/theme/team-4-800x800.jpg"
   },
   {
-    "revision": "72a16827b33a455daef8f1bb5bdd5378",
-    "url": "/img/pendants/48.jpg"
+    "revision": "eee9e834d36473d6282d86590c7bd156",
+    "url": "/img/pendants/23.jpg"
+  },
+  {
+    "revision": "2ceb17b251e5252e307a157efefb0396",
+    "url": "/img/rings/33.jpg"
   },
   {
     "revision": "df576cee46c69cca995f48dac108d369",
     "url": "/img/home/4.jpg"
   },
   {
-    "revision": "6184d8287221a6181244ad38b70a22dd",
-    "url": "/img/rings/22.jpg"
+    "revision": "eaa4c1b6189be006e9768a80932895ff",
+    "url": "/img/pendants/7.jpg"
   },
   {
-    "revision": "74696bd1dee0b33377a24dc040492db1",
-    "url": "/img/rings/21.jpg"
+    "revision": "b0c990ef0150c9ed3c0884ec69429b96",
+    "url": "/img/pendants/8.jpg"
   }
 ];
