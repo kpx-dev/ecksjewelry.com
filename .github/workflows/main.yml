@@ -2,7 +2,7 @@ name: ui-deploy
 
 on:
   push:
-    branches: [ vue ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
