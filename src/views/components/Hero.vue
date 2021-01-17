@@ -18,29 +18,29 @@
             <div class="rounded shadow-lg overflow-hidden">
                 <b-carousel id="carousel1" controls indicators>
                     <!-- Text slides with image -->
-                    <b-carousel-slide img-src="img/home/1.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/2.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/1.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/2.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/3.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/4.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/3.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/4.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/5.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/6.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/5.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/6.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/7.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/8.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/7.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/8.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/9.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/10.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/9.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/10.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/11.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/12.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/11.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/12.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/13.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/14.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/13.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/14.webp"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/15.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/16.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/15.webp"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/16.webp"></b-carousel-slide>
 
                 </b-carousel>
             </div>
