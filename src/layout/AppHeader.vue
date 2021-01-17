@@ -20,17 +20,17 @@
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
                 <router-link class="nav-link" to="pendants">
-                    <i class="fa fa-circle d-lg-none"></i>
+                    <i class="fas fa-gem d-lg-none"></i>
                     <span class="nav-link-inner--text">Pendants</span>
                 </router-link>
 
                 <router-link class="nav-link" to="rings">
-                    <i class="fa fa-diamond d-lg-none"></i>
+                    <i class="fa fa-ring d-lg-none"></i>
                     <span class="nav-link-inner--text">Rings</span>
                 </router-link>
 
                 <router-link class="nav-link" to="cufflinks">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <i class="fa fa-thumbtack d-lg-none"></i>
                     <span class="nav-link-inner--text">Cufflinks</span>
                 </router-link>
             </ul>
@@ -38,21 +38,21 @@
 
                 <li class="nav-item">
                     <router-link class="nav-link" to="about">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <i class="fa fa-info d-lg-none"></i>
                     <span class="nav-link-inner--text">About</span>
                     </router-link>
                 </li>
 
                 <li class="nav-item">
                     <router-link class="nav-link" to="contact">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <i class="fa fa-phone d-lg-none"></i>
                     <span class="nav-link-inner--text">Contact</span>
                     </router-link>
                 </li>
 
                 <li class="nav-item">
                     <router-link class="nav-link" to="retail">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                    <i class="fa fa-shopping-cart d-lg-none"></i>
                     <span class="nav-link-inner--text">Shop Retail</span>
                     </router-link>
                 </li>
