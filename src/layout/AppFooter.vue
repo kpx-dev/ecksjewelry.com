@@ -12,11 +12,15 @@
                 <div class="col-md-6">
                     <ul class="nav nav-footer justify-content-end">
                         <li class="nav-item">
-                            <a href="/" class="nav-link" rel="noopener">Ecks Jewelry</a>
+                            <router-link class="nav-link" to="/">
+                                <span class="nav-link-inner--text">Home</span>
+                            </router-link>
                         </li>
                         <li class="nav-item">
-                            <a href="about" class="nav-link" rel="noopener">About
-                                Us</a>
+                            <router-link class="nav-link" to="about">
+                                <span class="nav-link-inner--text">About</span>
+                            </router-link>
+
                         </li>
                     </ul>
                 </div>

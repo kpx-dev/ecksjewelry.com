@@ -18,13 +18,29 @@
             <div class="rounded shadow-lg overflow-hidden">
                 <b-carousel id="carousel1" controls indicators>
                     <!-- Text slides with image -->
-                    <b-carousel-slide img-src="img/home/14570531_1793852407561667_3292771639665911179_o_1793852407561667.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/14589975_1793851307561777_1762155703271041792_o_1793851307561777.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/14680841_1793851994228375_3595296018439816710_o_1793851994228375.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/1.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/2.jpg"></b-carousel-slide>
 
-                    <b-carousel-slide img-src="img/home/14680979_1793853064228268_967737282730335709_o_1793853064228268.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/14691922_1793853724228202_8431187937648648670_o_1793853724228202.jpg"></b-carousel-slide>
-                    <b-carousel-slide img-src="img/home/14692056_1793852924228282_4261533688473836440_o_1793852924228282.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/3.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/4.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/5.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/6.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/7.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/8.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/9.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/10.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/11.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/12.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/13.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/14.jpg"></b-carousel-slide>
+
+                    <b-carousel-slide img-src="img/home/15.jpg"></b-carousel-slide>
+                    <b-carousel-slide img-src="img/home/16.jpg"></b-carousel-slide>
 
                 </b-carousel>
             </div>

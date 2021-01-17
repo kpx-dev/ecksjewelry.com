@@ -2,11 +2,13 @@ import Vue from "vue";
 import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
-import Components from "./views/Components.vue";
-import Landing from "./views/Landing.vue";
-import Login from "./views/Login.vue";
-import Register from "./views/Register.vue";
-import Profile from "./views/Profile.vue";
+import Home from "./views/Home.vue";
+import Pendants from "./views/Pendants.vue";
+import Rings from "./views/Rings.vue";
+import Cufflinks from "./views/Cufflinks.vue";
+import About from "./views/About.vue";
+import Contact from "./views/Contact.vue";
+import Retail from "./views/Retail.vue";
 
 Vue.use(Router);
 
@@ -15,49 +17,67 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "components",
+      name: "home",
       components: {
         header: AppHeader,
-        default: Components,
+        default: Home,
         footer: AppFooter
       }
     },
     {
-      path: "/landing",
-      name: "landing",
+      path: "/pendants",
+      name: "pendants",
       components: {
         header: AppHeader,
-        default: Landing,
+        default: Pendants,
         footer: AppFooter
       }
     },
     {
-      path: "/login",
-      name: "login",
+      path: "/rings",
+      name: "rings",
       components: {
         header: AppHeader,
-        default: Login,
+        default: Rings,
         footer: AppFooter
       }
     },
     {
-      path: "/register",
-      name: "register",
+      path: "/cufflinks",
+      name: "cufflinks",
       components: {
         header: AppHeader,
-        default: Register,
+        default: Cufflinks,
         footer: AppFooter
       }
     },
     {
-      path: "/profile",
-      name: "profile",
+      path: "/about",
+      name: "about",
       components: {
         header: AppHeader,
-        default: Profile,
+        default: About,
         footer: AppFooter
       }
-    }
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      components: {
+        header: AppHeader,
+        default: Contact,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/retail",
+      name: "retail",
+      components: {
+        header: AppHeader,
+        default: Retail,
+        footer: AppFooter
+      }
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {

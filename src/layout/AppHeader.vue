@@ -7,9 +7,11 @@
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-                        <img src="img/brand/blue.png">
-                    </a>
+                    <router-link class="nav-link" to="/">
+                        <i class="fa fa-home d-lg-none"></i>
+                        <span class="nav-link-inner--text">Home</span>
+                    </router-link>
+
                 </div>
                 <div class="col-6 collapse-close">
                     <close-button @click="closeMenu"></close-button>
@@ -17,43 +19,42 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <a slot="title" href="pendants" class="nav-link" role="button">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                <router-link class="nav-link" to="pendants">
+                    <i class="fa fa-circle d-lg-none"></i>
                     <span class="nav-link-inner--text">Pendants</span>
-                </a>
+                </router-link>
 
-                <a slot="title" href="pendants" class="nav-link" role="button">
-                    <i class="ni ni-ui-04 d-lg-none"></i>
+                <router-link class="nav-link" to="rings">
+                    <i class="fa fa-diamond d-lg-none"></i>
                     <span class="nav-link-inner--text">Rings</span>
-                </a>
+                </router-link>
 
-                <a slot="title" href="pendants" class="nav-link" role="button">
+                <router-link class="nav-link" to="cufflinks">
                     <i class="ni ni-ui-04 d-lg-none"></i>
                     <span class="nav-link-inner--text">Cufflinks</span>
-                </a>
-
+                </router-link>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
 
                 <li class="nav-item">
-                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <router-link class="nav-link" to="about">
                     <i class="ni ni-ui-04 d-lg-none"></i>
                     <span class="nav-link-inner--text">About</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="nav-item">
-                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <router-link class="nav-link" to="contact">
                     <i class="ni ni-ui-04 d-lg-none"></i>
                     <span class="nav-link-inner--text">Contact</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="nav-item">
-                    <a slot="title" href="pendants" class="nav-link" role="button">
+                    <router-link class="nav-link" to="retail">
                     <i class="ni ni-ui-04 d-lg-none"></i>
                     <span class="nav-link-inner--text">Shop Retail</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="nav-item">
